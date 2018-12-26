@@ -30,7 +30,6 @@ assert os.path.isdir(args.folder), "Input folder does not exist:" + args.folder
 print("Creating export file: " + args.output)
 z = zipfile.ZipFile(args.output, "w", zipfile.ZIP_DEFLATED)
 
-
 def write_and_note(path: str, dest: str):
     print("    {} --> ZIP({})".format(path, dest))
     z.write(path, dest)
